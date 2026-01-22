@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Easy Table</title>
+  <title>Table and Form</title>
   <style>
+    body {
+      background-color: orange;
+      font-family: Arial, sans-serif;
+    }
     table {
       border-collapse: collapse;
       width: 60%;
+      margin-bottom: 30px;
     }
     th, td {
       border: 1px solid black;
@@ -15,9 +20,20 @@
     .row1 td { background-color: lightblue; color: darkred; }
     .row2 td { background-color: lightgreen; color: navy; }
     .row3 td { background-color: lightyellow; color: purple; }
+    form {
+      border: 2px solid black;
+      padding: 20px;
+      width: 50%;
+      background-color: #fff3e0;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
+  <!-- Table -->
   <table>
     <tr>
       <th>Roll No</th>
@@ -25,8 +41,7 @@
       <th>Address</th>
     </tr>
     <tr class="row1">
-      <td>1</td>
-      <td>Aman</td>
+      <td colspan="2">1 - Aman</td>
       <td>Mumbai</td>
     </tr>
     <tr class="row2">
@@ -35,10 +50,45 @@
       <td>Pune</td>
     </tr>
     <tr class="row3">
-      <td>3</td>
-      <td>Vivek</td>
+      <td colspan="2">3 - Vivek</td>
       <td>Thane</td>
     </tr>
   </table>
+
+  <!-- Form -->
+  <form>
+    <h2>Registration Form</h2>
+    <label>First Name:
+      <input type="text" name="firstname">
+    </label>
+    <label>Last Name:
+      <input type="text" name="lastname">
+    </label>
+    <label>Email:
+      <input type="email" name="email">
+    </label>
+
+    <label>
+      <input type="checkbox" name="subscribe"> Subscribe to newsletter
+    </label>
+
+    <p>Select your option (Radio buttons):</p>
+    <label><input type="radio" name="choice" value="Option1"> Option 1</label>
+    <label><input type="radio" name="choice" value="Option2"> Option 2</label>
+    <label><input type="radio" name="choice" value="Option3"> Option 3</label>
+    <label><input type="radio" name="choice" value="Option4"> Option 4</label>
+
+    <label>Choose a city:
+      <select name="city">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+        <option value="Thane">Thane</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+    </label>
+
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
