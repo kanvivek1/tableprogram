@@ -1,134 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stylish Registration Form</title>
+  <title>Simple Registration Form</title>
   <style>
     body {
-      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100vh; /* full screen height */
+      margin: 0;
     }
 
     form {
-      background: #ffffff;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 400px;
-      animation: fadeIn 1s ease-in-out;
+      background-color: white;
+      border: 1px solid black;
+      padding: 20px;
+      width: 300px;
+      text-align: left;
     }
 
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-      font-size: 26px;
-      letter-spacing: 1px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 15px;
-      color: #444;
-      font-weight: bold;
-    }
-
-    input[type="text"], 
-    input[type="email"], 
-    select {
+    input, select {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.3s;
+      margin-bottom: 10px;
     }
 
-    input[type="text"]:focus, 
-    input[type="email"]:focus, 
-    select:focus {
-      border-color: #74ebd5;
-      box-shadow: 0 0 8px rgba(116,235,213,0.6);
-      outline: none;
-    }
-
-    input[type="checkbox"], 
-    input[type="radio"] {
-      margin-right: 8px;
-    }
-
-    p {
-      margin: 15px 0 5px;
-      font-weight: bold;
-      color: #333;
+    input[type="checkbox"], input[type="radio"] {
+      width: auto;
     }
 
     input[type="submit"] {
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background-color: blue;
       color: white;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
+      padding: 8px;
       cursor: pointer;
-      transition: 0.3s;
-      margin-top: 20px;
+      width: 100%;
     }
 
     input[type="submit"]:hover {
-      background: linear-gradient(135deg, #764ba2, #667eea);
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
+      background-color: darkblue;
     }
   </style>
 </head>
 <body>
-  <!-- Form -->
   <form>
-    <h2>Registration Form</h2>
-    
-    <label>First Name:
-      <input type="text" name="firstname" placeholder="Enter your first name">
-    </label>
-    
-    <label>Last Name:
-      <input type="text" name="lastname" placeholder="Enter your last name">
-    </label>
-    
-    <label>Email:
-      <input type="email" name="email" placeholder="Enter your email">
-    </label>
+    <h3>Registration Form</h3>
 
-    <label>
-      <input type="checkbox" name="subscribe"> Subscribe to newsletter
-    </label>
+    First Name: <input type="text" name="firstname"><br>
+    Last Name: <input type="text" name="lastname"><br>
+    Email: <input type="email" name="email"><br>
 
-    <p>Select your favorite subject:</p>
-    <label><input type="radio" name="subject" value="Math"> Mathematics</label>
-    <label><input type="radio" name="subject" value="Science"> Science</label>
-    <label><input type="radio" name="subject" value="History"> History</label>
-    <label><input type="radio" name="subject" value="English"> English</label>
+    <input type="checkbox" name="subscribe"> Subscribe to newsletter<br><br>
 
-    <label>Choose a city:
-      <select name="city">
-        <option value="Mumbai">Mumbai</option>
-        <option value="Pune">Pune</option>
-        <option value="Thane">Thane</option>
-        <option value="Delhi">Delhi</option>
-      </select>
-    </label>
+    Favorite subject:<br>
+    <input type="radio" name="subject" value="Math"> Mathematics<br>
+    <input type="radio" name="subject" value="Science"> Science<br>
+    <input type="radio" name="subject" value="History"> History<br>
+    <input type="radio" name="subject" value="English"> English<br><br>
+
+    Choose a city:
+    <select name="city">
+      <option>Mumbai</option>
+      <option>Pune</option>
+      <option>Thane</option>
+      <option>Delhi</option>
+    </select><br><br>
 
     <input type="submit" value="Submit">
   </form>
