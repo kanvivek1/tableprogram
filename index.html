@@ -2,36 +2,44 @@
 <html>
 <head>
   <title>Table and Form</title>
-  </head>
   <style>
     body {
       background-color: lightblue;
       font-family: Arial, sans-serif;
     }
-</style>
+  </style>
 </head>
+<body>
   <!-- Form -->
   <form>
     <h2>Registration Form</h2>
+    
     <label>First Name:
       <input type="text" name="firstname">
     </label>
+    <br><br>
+    
     <label>Last Name:
       <input type="text" name="lastname">
     </label>
+    <br><br>
+    
     <label>Email:
       <input type="email" name="email">
     </label>
+    <br><br>
 
     <label>
       <input type="checkbox" name="subscribe"> Subscribe to newsletter
     </label>
+    <br><br>
 
     <p>Select your favorite subject (Radio buttons):</p>
     <label><input type="radio" name="subject" value="Math"> Mathematics</label>
     <label><input type="radio" name="subject" value="Science"> Science</label>
     <label><input type="radio" name="subject" value="History"> History</label>
     <label><input type="radio" name="subject" value="English"> English</label>
+    <br><br>
 
     <label>Choose a city:
       <select name="city">
@@ -41,8 +49,8 @@
         <option value="Delhi">Delhi</option>
       </select>
     </label>
-
     <br><br>
+
     <input type="submit" value="Submit">
   </form>
 </body>
